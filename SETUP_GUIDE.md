@@ -30,7 +30,7 @@ MongoDB Atlas provides a fully managed, free cloud database. This is where `mong
    - Click the **"Connect"** button on your new cluster.
    - Choose **"Drivers"** (Connect your application).
    - Copy the connection string provided. It will look something like this:
-     `mongodb+srv://eventoradmin:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority`
+     `your_mongodb_connection_string`
    - **Important**: Replace `<password>` in the string with the actual password you created in Step 3. (Do not include the `< >` brackets).
 
 ---
@@ -54,10 +54,10 @@ Now that you have your credentials, you need to plug them into the backend. Open
 
 ```env
 # Paste the MongoDB string you generated (make sure you swapped the password)
-MONGO_URI=mongodb+srv://eventoradmin:your_actual_password@cluster0.xxxxx.mongodb.net/eventora?retryWrites=true&w=majority
+MONGO_URI=your_mongodb_connection_string
 
 # This can be any random string, but keep it secure.
-JWT_SECRET=supersecretjwtkey_eventora
+JWT_SECRET=your_random_secret
 
 # Email Setup Configured using Step 2
 EMAIL_USER=yourgmail@gmail.com
